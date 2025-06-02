@@ -11,6 +11,7 @@ export default defineConfig([
         ecmaVersion: "latest", 
         sourceType: "module", 
       },
+    },
     rules: {
       'no-restricted-imports': [
            'error',
@@ -23,7 +24,6 @@ export default defineConfig([
              ],
            },
          ],
-
-    },
   },
-]);
+}]
+);
