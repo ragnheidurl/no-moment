@@ -15,4 +15,12 @@ module.exports = {
       },
     },
   },
+ configs: {
+    recommended: {
+      plugins: ["no-moment"],
+      rules: {
+        "no-moment/no-moment": "error",
+      },
+    },
+  },
 };
