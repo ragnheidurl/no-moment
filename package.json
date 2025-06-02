@@ -1,5 +1,5 @@
 {
-  "name": "no-eslint",
+  "name": "eslint-plugin-no-moment",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
