@@ -5,7 +5,18 @@
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended"
   ],
-  "rules": {
-   
-  }
+  "rules" : {
+      "no-restricted-imports" : [
+           "error",
+           {
+             "paths": [
+               {
+                 "name": "moment",
+                 "message": "moment is not allowed"
+               }
+             ]
+           }
+         ]
+
+    }
 }
