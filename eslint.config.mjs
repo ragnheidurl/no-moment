@@ -1,0 +1,31 @@
+import js from "@eslint/js";
+import globals from "globals";
+import tseslint from "typescript-eslint";
+import { defineConfig } from "eslint/config";
+
+
+
+export default defineConfig([
+  {
+    files: ["**/*.{js,mjs,cjs,ts,mts,cts}"],
+    plugins: { js },
+    languageOptions: {
+      parser: tseslint.parser,
+      globals: globals.browser,
+    },
+    rules: {
+      'no-restricted-imports': [
+           'error',
+           {
+             paths: [
+               {
+                 name: 'moment',
+                 message: 'Moment is not allowed',
+               },
+             ],
+           },
+         ],
+    },
+  },
+  ...tseslint.configs.recommended,
+]);
